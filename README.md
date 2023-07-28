@@ -1,13 +1,13 @@
 # **XAR OS** - MacOS Clone Built with Next.js
 
-XAR OS is a stunning and feature-rich MacOS clone created using `Next.js`, a powerful React framework. Inspired by the elegant design of macOS, `XAR OS` brings a familiar and user-friendly experience to the web. Enjoy a seamless interface with _smooth animations_, a _responsive layout_, and a range of _macOS-like applications_.
+XAR OS is a stunning and feature-rich MacOS clone created using `Next.js`, a powerful React framework. Inspired by the elegant design of MacOS, `XAR OS` brings a familiar and user-friendly experience to the web. Enjoy a seamless interface with _smooth animations_, a _responsive layout_, and a range of _macOS-like applications_.
 
 ### Key Features:
 
--   Beautifully crafted `macOS-inspired` UI design.
+-   Beautifully crafted `MacOS-inspired` UI design.
 -   `Smooth transitions and animations` for an immersive experience.
 -   `Responsive layout` to adapt across various devices and screen sizes.
--   macOS-like applications, including `Finder (Seeker)`, `Music`, `Calculator`, `Safari`, `Mail`, and more.
+-   MacOS-like applications, including `Finder (Seeker)`, `Music`, `Calculator`, `Safari`, `Mail`, and more.
 -   Built with `Next.js`, ensuring optimal performance and ease of development.
 
 ### Technologies Used:
@@ -34,12 +34,10 @@ This project has been a labor of love, and I am proud to present a functional an
 
 As an open-source project, I encourage you to contribute, explore, and take part in shaping the future of XAR OS. Your feedback and ideas are invaluable in making this project even better.
 
-Thank you for being a part of this journey. Together, let's continue to push the boundaries of what's possible on the web and celebrate the beauty of macOS in a whole new dimension.
+Thank you for being a part of this journey. Together, let's continue to push the boundaries of what's possible on the web and celebrate the beauty of MacOS in a whole new dimension.
 
 Happy exploring!
 
 ## Let's Connect
-
-## 🌐 Socials:
 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/itsdrvgo) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/itsdrvgo) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/itsdrvgo) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/itsdrvgo) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@UCFTLRtd7NMfdD_R8ftqXBzQ)
