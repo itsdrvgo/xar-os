@@ -2,11 +2,12 @@ import Music from "@/public/apple-music.svg";
 import Safari from "@/public/apple-safari.svg";
 import Store from "@/public/apple-store.svg";
 import Calculator from "@/public/calculator.svg";
-import Finder from "@/public/finder.svg";
+import Seeker from "@/public/finder.svg";
 import GitHub from "@/public/github.svg";
 import Mail from "@/public/mail.svg";
 import Settings from "@/public/settings.svg";
 import VSCode from "@/public/visual-studio-code-icon.svg";
+import { siteConfig } from "@/src/config/site";
 import { cn } from "@/src/lib/utils";
 import { DefaultProps } from "@/src/types";
 import { motion, Variants } from "framer-motion";
@@ -38,7 +39,7 @@ function Docker({ className }: PageProps) {
             variants={slideUp}
         >
             <div className="absolute bottom-5 left-1/2 grid -translate-x-1/2 grid-flow-col gap-2 rounded-xl border border-gray-500 bg-white/10 p-2 backdrop-blur transition-transform">
-                <DockItem src={Finder} alt="Finder" />
+                <DockItem src={Seeker} alt="Seeker" />
 
                 <Separator orientation="vertical" className="bg-white/80" />
 
@@ -54,7 +55,11 @@ function Docker({ className }: PageProps) {
 
                 <div className="grid grid-flow-col gap-2">
                     <DockItem src={VSCode} alt="VS Code" />
-                    <DockItem src={GitHub} alt="GitHub" />
+                    <DockItem
+                        src={GitHub}
+                        alt="View Source"
+                        redirect={siteConfig.links.source}
+                    />
                 </div>
 
                 <Separator orientation="vertical" className="bg-white/80" />

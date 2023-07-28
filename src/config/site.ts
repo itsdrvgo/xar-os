@@ -21,5 +21,6 @@ export const siteConfig = {
         twitter: "https://www.twitter.com/itsdrvgo",
         github: "https://www.github.com/itsdrvgo",
         discord: "https://www.dsc.gg/drvgo",
+        source: "https://github.com/itsdrvgo/xar-os",
     },
 };

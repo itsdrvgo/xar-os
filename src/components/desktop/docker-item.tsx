@@ -1,22 +1,27 @@
 "use client";
 
 import { cn } from "@/src/lib/utils";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import React, { ImgHTMLAttributes } from "react";
+import React from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
-const DockItem = ({
-    src,
-    alt,
-    className,
-}: ImgHTMLAttributes<HTMLImageElement>) => {
+interface PagePros {
+    src: string | StaticImport;
+    alt: string;
+    className?: string;
+    redirect?: string;
+}
+
+const DockItem = ({ src, alt, className, redirect }: PagePros) => {
     return (
         <Tooltip>
             <TooltipTrigger
                 className={cn(
-                    "transition-all duration-150 ease-in-out hover:mx-5 hover:-translate-y-6 hover:scale-150",
+                    "cursor-default transition-all duration-150 ease-in-out hover:mx-5 hover:-translate-y-6 hover:scale-150",
                     className
                 )}
+                onClick={() => (redirect ? window.open(redirect) : null)}
             >
                 {" "}
                 <Image src={src!} alt={alt!} width={50} height={50} />
