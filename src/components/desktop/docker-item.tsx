@@ -18,7 +18,7 @@ const DockItem = ({ src, alt, className, redirect }: PagePros) => {
         <Tooltip>
             <TooltipTrigger
                 className={cn(
-                    "cursor-default transition-all duration-150 ease-in-out hover:mx-5 hover:-translate-y-6 hover:scale-150",
+                    "mx-2 cursor-default transition-all duration-150 ease-in-out hover:mx-5 hover:-translate-y-6 hover:scale-150",
                     className
                 )}
                 onClick={() => (redirect ? window.open(redirect) : null)}
