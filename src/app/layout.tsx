@@ -2,6 +2,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Provider from "../components/global/provider";
 import { Toaster } from "../components/ui/toaster";
 import { siteConfig } from "../config/site";
 import { cn } from "../lib/utils";
@@ -47,16 +48,18 @@ function RootLayout({ children }: DefaultProps) {
     return (
         <html lang="en" suppressHydrationWarning>
             <head />
-            <body
-                className={cn(
-                    "min-h-screen overflow-x-hidden scroll-smooth antialiased",
-                    poppins.className
-                )}
-            >
-                {children}
-                <Analytics />
-                <Toaster />
-            </body>
+            <Provider>
+                <body
+                    className={cn(
+                        "min-h-screen overflow-x-hidden scroll-smooth antialiased",
+                        poppins.className
+                    )}
+                >
+                    {children}
+                    <Analytics />
+                    <Toaster />
+                </body>
+            </Provider>
         </html>
     );
 }
