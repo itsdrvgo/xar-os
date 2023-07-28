@@ -1,4 +1,4 @@
-import DRVGOLogo from "@/public/drvgo-logo.png";
+import XARLogo from "@/public/xar-os.png";
 import { cn } from "@/src/lib/utils";
 import { DefaultProps } from "@/src/types";
 import Image from "next/image";
@@ -12,13 +12,7 @@ function Loader({ className }: DefaultProps) {
                 className
             )}
         >
-            <Image
-                src={DRVGOLogo}
-                alt="DRVGO"
-                width={200}
-                height={200}
-                priority
-            />
+            <Image src={XARLogo} alt="XAR" width={200} height={200} priority />
             <LoaderBar />
         </div>
     );

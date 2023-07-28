@@ -1,6 +1,6 @@
 "use client";
 
-import DRVGOLogo from "@/public/drvgo-logo.png";
+import XARLogo from "@/public/xar-os.png";
 import { DefaultProps } from "@/src/types";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
@@ -42,12 +42,7 @@ function Taskbar({ className }: DefaultProps) {
             <Menubar className="gap-5">
                 <MenubarMenu>
                     <MenubarTrigger className="p-1 focus:bg-transparent data-[state=open]:bg-transparent">
-                        <Image
-                            src={DRVGOLogo}
-                            alt="XAR"
-                            width={20}
-                            height={20}
-                        />
+                        <Image src={XARLogo} alt="XAR" width={20} height={20} />
                     </MenubarTrigger>
                     <MenubarContent>
                         <MenubarItem>About This XAR</MenubarItem>
