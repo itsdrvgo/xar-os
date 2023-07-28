@@ -9,14 +9,34 @@ import Settings from "@/public/settings.svg";
 import VSCode from "@/public/visual-studio-code-icon.svg";
 import { cn } from "@/src/lib/utils";
 import { DefaultProps } from "@/src/types";
+import { motion, Variants } from "framer-motion";
 import { Separator } from "../ui/separator";
 import DockItem from "./docker-item";
 
 interface PageProps extends DefaultProps {}
 
 function Docker({ className }: PageProps) {
+    const slideUp: Variants = {
+        hide: {
+            opacity: 0,
+            y: 50,
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+            },
+        },
+    };
+
     return (
-        <div className={cn("h-full w-full cursor-default", className)}>
+        <motion.div
+            className={cn("h-full w-full cursor-default", className)}
+            initial="hide"
+            animate={"show"}
+            variants={slideUp}
+        >
             <div className="absolute bottom-5 left-1/2 grid -translate-x-1/2 grid-flow-col gap-2 rounded-xl border border-gray-500 bg-white/10 p-2 backdrop-blur transition-transform">
                 <DockItem src={Finder} alt="Finder" />
 
@@ -41,7 +61,7 @@ function Docker({ className }: PageProps) {
 
                 <DockItem src={Settings} alt="Settings" />
             </div>
-        </div>
+        </motion.div>
     );
 }
 

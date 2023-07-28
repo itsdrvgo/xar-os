@@ -55,12 +55,20 @@ function Taskbar({ className }: DefaultProps) {
                         <MenubarItem>System Preferences</MenubarItem>
                         <MenubarItem>App Store</MenubarItem>
                         <MenubarSeparator />
-                        <MenubarItem>Sleep</MenubarItem>
-                        <MenubarItem>Restart</MenubarItem>
-                        <MenubarItem>Shut Down</MenubarItem>
-                        <MenubarSeparator />
-                        <MenubarItem>Lock Screen</MenubarItem>
+                        <MenubarItem onSelect={() => router.push("/lock")}>
+                            Sleep
+                        </MenubarItem>
+                        <MenubarItem onSelect={() => router.push("/lock")}>
+                            Restart
+                        </MenubarItem>
                         <MenubarItem onSelect={() => router.push("/")}>
+                            Shut Down
+                        </MenubarItem>
+                        <MenubarSeparator />
+                        <MenubarItem onSelect={() => router.push("/lock")}>
+                            Lock Screen
+                        </MenubarItem>
+                        <MenubarItem onSelect={() => router.push("/lock")}>
                             Log Out
                         </MenubarItem>
                     </MenubarContent>

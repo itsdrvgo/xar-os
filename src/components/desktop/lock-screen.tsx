@@ -11,7 +11,6 @@ import {
 } from "@/src/components/ui/avatar";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import Restart from "./restart";
 
 function LockScreen() {
