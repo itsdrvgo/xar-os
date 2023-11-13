@@ -1,5 +1,3 @@
-import { DefaultProps } from "@/src/types";
-import { useRouter } from "next/navigation";
 import {
     Menubar,
     MenubarContent,
@@ -8,7 +6,9 @@ import {
     MenubarMenu,
     MenubarSeparator,
     MenubarTrigger,
-} from "../ui/Menubar";
+} from "@/src/components/ui/Menubar";
+import { DefaultProps } from "@/src/types";
+import { useRouter } from "next/navigation";
 import XAR from "./svgs/XAR";
 
 function NavMenu({}: DefaultProps) {

@@ -1,12 +1,12 @@
+import "./globals.css";
+import CustomToaster from "@/src/components/ui/Toaster";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import ClientProvider from "../components/providers/client";
-import CustomToaster from "../components/ui/Toaster";
 import { siteConfig } from "../config/site";
 import { cn } from "../lib/utils";
 import { RootLayoutProps } from "../types";
-import "./globals.css";
 
 const poppins = Poppins({
     subsets: ["latin"],

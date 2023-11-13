@@ -1,6 +1,6 @@
 import { nextui } from "@nextui-org/react";
 
-export default {
+const tailwind = {
     darkMode: "class",
     content: [
         "./pages/**/*.{ts,tsx}",
@@ -28,3 +28,5 @@ export default {
     },
     plugins: [nextui()],
 };
+
+export default tailwind;
