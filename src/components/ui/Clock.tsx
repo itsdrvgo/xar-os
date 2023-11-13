@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const RealTimeClock: React.FC = () => {
+function Clock() {
     const [currentDate, setCurrentDate] = useState<Date>(new Date());
 
     useEffect(() => {
@@ -29,6 +29,6 @@ const RealTimeClock: React.FC = () => {
             <p>{formattedTime}</p>
         </div>
     );
-};
+}
 
-export default RealTimeClock;
+export default Clock;

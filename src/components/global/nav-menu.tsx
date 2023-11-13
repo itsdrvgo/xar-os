@@ -1,6 +1,4 @@
-import XARLogo from "@/public/xar-os.png";
 import { DefaultProps } from "@/src/types";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
     Menubar,
@@ -10,23 +8,29 @@ import {
     MenubarMenu,
     MenubarSeparator,
     MenubarTrigger,
-} from "../ui/menubar";
+} from "../ui/Menubar";
+import XAR from "./svgs/XAR";
 
-function NavMenu({ className }: DefaultProps) {
+function NavMenu({}: DefaultProps) {
     const router = useRouter();
 
     return (
         <Menubar className="gap-5">
             <MenubarMenu>
                 <MenubarTrigger className="p-1 focus:bg-transparent data-[state=open]:bg-transparent">
-                    <Image src={XARLogo} alt="XAR" width={20} height={20} />
+                    <XAR width={17} height={17} />
                 </MenubarTrigger>
+
                 <MenubarContent>
                     <MenubarItem>About This XAR</MenubarItem>
+
                     <MenubarSeparator />
+
                     <MenubarItem>System Preferences</MenubarItem>
                     <MenubarItem>App Store</MenubarItem>
+
                     <MenubarSeparator />
+
                     <MenubarItem onSelect={() => router.push("/lock")}>
                         Sleep
                     </MenubarItem>
@@ -50,13 +54,18 @@ function NavMenu({ className }: DefaultProps) {
                 <MenubarTrigger className="p-1 focus:bg-black/10 data-[state=open]:bg-black/10">
                     Seeker
                 </MenubarTrigger>
+
                 <MenubarContent>
                     <MenubarItem>About Seeker</MenubarItem>
+
                     <MenubarSeparator />
+
                     <MenubarItem>Preferences</MenubarItem>
                     <MenubarItem>Seek</MenubarItem>
                     <MenubarItem>Hide Seeker</MenubarItem>
+
                     <MenubarSeparator />
+
                     <MenubarItem>Empty Trash</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
@@ -66,22 +75,33 @@ function NavMenu({ className }: DefaultProps) {
                     <MenubarTrigger className="p-1 font-normal focus:bg-black/10 data-[state=open]:bg-black/10">
                         File
                     </MenubarTrigger>
+
                     <MenubarContent>
                         <MenubarItem>New Seeker</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem>New Tab</MenubarItem>
                         <MenubarItem>New Folder</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem disabled>Open</MenubarItem>
                         <MenubarItem disabled>Open with</MenubarItem>
                         <MenubarItem disabled>Print</MenubarItem>
                         <MenubarItem disabled>Close Window</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem disabled>Rename</MenubarItem>
                         <MenubarItem disabled>Compress</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem>Find</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem disabled>Eject</MenubarItem>
                     </MenubarContent>
                 </MenubarMenu>
@@ -90,15 +110,20 @@ function NavMenu({ className }: DefaultProps) {
                     <MenubarTrigger className="p-1 font-normal focus:bg-black/10 data-[state=open]:bg-black/10">
                         Edit
                     </MenubarTrigger>
+
                     <MenubarContent>
                         <MenubarItem disabled>Undo</MenubarItem>
                         <MenubarItem disabled>Redo</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem disabled>Cut</MenubarItem>
                         <MenubarItem disabled>Copy</MenubarItem>
                         <MenubarItem disabled>Paste</MenubarItem>
                         <MenubarItem disabled>Select All</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem>Show Clipboard</MenubarItem>
                         <MenubarItem>Emojis & Symbols</MenubarItem>
                     </MenubarContent>
@@ -108,23 +133,30 @@ function NavMenu({ className }: DefaultProps) {
                     <MenubarTrigger className="p-1 font-normal focus:bg-black/10 data-[state=open]:bg-black/10">
                         View
                     </MenubarTrigger>
+
                     <MenubarContent>
                         <MenubarItem disabled>As Icons</MenubarItem>
                         <MenubarItem disabled>As List</MenubarItem>
                         <MenubarItem disabled>As Columns</MenubarItem>
                         <MenubarItem disabled>As Gallery</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem>Use Stacks</MenubarItem>
                         <MenubarItem disabled>Sort by</MenubarItem>
                         <MenubarItem disabled>Clean Up</MenubarItem>
                         <MenubarItem disabled>Clean Up by</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem disabled>Hide Toolbar</MenubarItem>
                         <MenubarItem disabled>Show All Tabs</MenubarItem>
                         <MenubarItem disabled>Show Tab Bar</MenubarItem>
                         <MenubarItem disabled>Show Pathbar</MenubarItem>
                         <MenubarItem disabled>Show Status Bar</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem disabled>Customize Tool Bar</MenubarItem>
                     </MenubarContent>
                 </MenubarMenu>
@@ -133,10 +165,13 @@ function NavMenu({ className }: DefaultProps) {
                     <MenubarTrigger className="p-1 font-normal focus:bg-black/10 data-[state=open]:bg-black/10">
                         Go
                     </MenubarTrigger>
+
                     <MenubarContent>
                         <MenubarItem disabled>Back</MenubarItem>
                         <MenubarItem disabled>Forward</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem>Recents</MenubarItem>
                         <MenubarItem>Documents</MenubarItem>
                         <MenubarItem>Downloads</MenubarItem>
@@ -146,7 +181,9 @@ function NavMenu({ className }: DefaultProps) {
                         <MenubarItem>xCloud</MenubarItem>
                         <MenubarItem>Applications</MenubarItem>
                         <MenubarItem>Utilities</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem>Go to Folder</MenubarItem>
                     </MenubarContent>
                 </MenubarMenu>
@@ -155,20 +192,25 @@ function NavMenu({ className }: DefaultProps) {
                     <MenubarTrigger className="p-1 font-normal focus:bg-black/10 data-[state=open]:bg-black/10">
                         Window
                     </MenubarTrigger>
+
                     <MenubarContent>
                         <MenubarItem disabled>Minimize</MenubarItem>
                         <MenubarItem disabled>Zoom</MenubarItem>
                         <MenubarItem disabled>Move to Left</MenubarItem>
                         <MenubarItem disabled>Move to Right</MenubarItem>
                         <MenubarItem>Cycle Through Windows</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem disabled>Show Previous Tab</MenubarItem>
                         <MenubarItem disabled>Show Next Tab</MenubarItem>
                         <MenubarItem disabled>
                             Move Tab to New Window
                         </MenubarItem>
                         <MenubarItem disabled>Merge All Windows</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem>Bring All to Front</MenubarItem>
                     </MenubarContent>
                 </MenubarMenu>
@@ -177,10 +219,13 @@ function NavMenu({ className }: DefaultProps) {
                     <MenubarTrigger className="p-1 font-normal focus:bg-black/10 data-[state=open]:bg-black/10">
                         Help
                     </MenubarTrigger>
+
                     <MenubarContent>
                         <MenubarItem>Send Seeker Feedback</MenubarItem>
                         <MenubarItem>XAR Help</MenubarItem>
+
                         <MenubarSeparator />
+
                         <MenubarItem>Contact Developer</MenubarItem>
                     </MenubarContent>
                 </MenubarMenu>

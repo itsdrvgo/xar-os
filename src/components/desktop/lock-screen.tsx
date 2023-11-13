@@ -4,13 +4,8 @@ import LockScreenBG from "@/public/lock-background.jpg";
 import UserPfp from "@/public/user-pfp.jpg";
 import LoginForm from "@/src/components/desktop/login-form";
 import Power from "@/src/components/desktop/power";
-import {
-    Avatar,
-    AvatarFallback,
-    AvatarImage,
-} from "@/src/components/ui/avatar";
+import { Avatar } from "@nextui-org/react";
 import { motion, Variants } from "framer-motion";
-import Image from "next/image";
 import Restart from "./restart";
 
 function LockScreen() {
@@ -56,18 +51,19 @@ function LockScreen() {
 
     return (
         <div className="relative flex h-screen w-full items-center justify-center overflow-hidden">
-            <div className="absolute -z-50 h-full w-full opacity-80">
-                <Image
-                    src={LockScreenBG}
-                    alt="LockScreenBG"
-                    priority
-                    fill
-                    style={{ objectFit: "cover" }}
-                />
-            </div>
+            <div
+                className="absolute h-full w-full opacity-80"
+                style={{
+                    backgroundImage: `url(${LockScreenBG.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    filter: "blur(10px)",
+                    transform: "scale(1.1)",
+                }}
+            />
 
             <motion.div
-                className="flex h-full w-full max-w-[40rem] flex-col items-center justify-center gap-3"
+                className="z-10 flex h-full w-full max-w-[40rem] flex-col items-center justify-center gap-3"
                 initial="hide"
                 whileInView={"show"}
                 variants={fadeInContainer}
@@ -78,10 +74,14 @@ function LockScreen() {
                     whileInView={"show"}
                     variants={slideUp}
                 >
-                    <Avatar className="h-32 w-32">
-                        <AvatarImage src={UserPfp.src} alt="ProfilePicture" />
-                        <AvatarFallback>X</AvatarFallback>
-                    </Avatar>
+                    <Avatar
+                        src={UserPfp.src}
+                        alt="ProfilePicture"
+                        classNames={{
+                            base: "h-32 w-32",
+                        }}
+                        radius="full"
+                    />
                 </motion.div>
 
                 <motion.div
@@ -91,6 +91,7 @@ function LockScreen() {
                     variants={slideDown}
                 >
                     <p className="text-xl font-semibold">XAR</p>
+
                     <LoginForm />
                 </motion.div>
             </motion.div>

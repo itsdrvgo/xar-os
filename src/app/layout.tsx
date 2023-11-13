@@ -1,12 +1,12 @@
-import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import Provider from "../components/global/provider";
-import { Toaster } from "../components/ui/toaster";
+import ClientProvider from "../components/providers/client";
+import CustomToaster from "../components/ui/Toaster";
 import { siteConfig } from "../config/site";
 import { cn } from "../lib/utils";
-import { DefaultProps } from "../types";
+import { RootLayoutProps } from "../types";
+import "./globals.css";
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -35,31 +35,45 @@ export const metadata: Metadata = {
         title: siteConfig.name,
         description: siteConfig.description,
         siteName: siteConfig.name,
+        images: [
+            {
+                url: siteConfig.ogImage,
+                width: 1200,
+                height: 630,
+                alt: siteConfig.name,
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: siteConfig.name,
+        description: siteConfig.description,
+        images: [siteConfig.ogImage],
+        creator: "@itsdrvgo",
     },
     icons: {
         icon: "/favicon.ico",
         shortcut: "/favicon-16x16.png",
         apple: "/apple-touch-icon.png",
     },
+    manifest: "/site.webmanifest",
     metadataBase: new URL(siteConfig.url),
 };
 
-function RootLayout({ children }: DefaultProps) {
+function RootLayout({ children }: RootLayoutProps) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en" suppressHydrationWarning className="dark">
             <head />
-            <Provider>
-                <body
-                    className={cn(
-                        "min-h-screen overflow-x-hidden scroll-smooth antialiased",
-                        poppins.className
-                    )}
-                >
-                    {children}
-                    <Analytics />
-                    <Toaster />
-                </body>
-            </Provider>
+            <body
+                className={cn(
+                    "min-h-screen overflow-x-hidden scroll-smooth antialiased",
+                    poppins.className
+                )}
+            >
+                <ClientProvider>{children}</ClientProvider>
+                <Analytics />
+                <CustomToaster />
+            </body>
         </html>
     );
 }

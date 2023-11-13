@@ -22,20 +22,9 @@ export default {
                 border: "var(--border)",
                 text: "var(--text)",
                 background: "var(--background)",
-                code: "var(--code)",
                 accent: "var(--accent)",
-                chat: {
-                    DEFAULT: "var(--chat)",
-                    input: "var(--chat-input)",
-                    border: "var(--chat-border)",
-                    hover: "var(--chat-hover)",
-                },
             },
         },
     },
-    plugins: [
-        require("tailwindcss-animate"),
-        require("@tailwindcss/typography"),
-        nextui(),
-    ],
+    plugins: [nextui()],
 };

@@ -20,13 +20,7 @@ const config = {
         next: {
             rootDir: ["./src/"],
         },
-        ignorePatterns: [
-            "node_modules/",
-            ".next/",
-            "assets/",
-            "public/",
-            "drizzle/",
-        ],
+        ignorePatterns: ["node_modules/", ".next/", "assets/", "public/"],
     },
 };
 

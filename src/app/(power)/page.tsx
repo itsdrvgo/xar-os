@@ -1,4 +1,4 @@
-import PowerScreen from "@/src/components/global/power-screen";
+import PowerScreen from "@/src/components/power/power-screen";
 
 function Page() {
     return <PowerScreen />;

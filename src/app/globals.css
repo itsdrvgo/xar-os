@@ -5,37 +5,9 @@
 @layer base {
     :root {
         --text: hsl(0, 0%, 100%);
-
         --background: hsl(0, 0%, 0%);
-        --foreground: hsl(213 31% 91%);
-
-        --muted: hsl(224, 81%, 6%);
-        --muted-foreground: hsl(216, 11%, 65%);
-
-        --accent: hsl(216 34% 17%);
-        --accent-foreground: hsl(212, 85%, 82%);
-
-        --popover: hsl(224 71% 4%);
-        --popover-foreground: hsl(215 20.2% 65.1%);
-
-        --border: hsl(216 34% 17%);
-        --input: hsl(216 34% 17%);
-
-        --card: hsl(240, 55%, 13%);
-        --card-foreground: hsl(213 31% 91%);
-
-        --primary: hsl(210 40% 98%);
-        --primary-foreground: hsl(222.2 47.4% 1.2%);
-
-        --secondary: hsl(222.2 47.4% 11.2%);
-        --secondary-foreground: hsl(210 40% 98%);
-
-        --destructive: hsl(0 63% 31%);
-        --destructive-foreground: hsl(210 40% 98%);
-
-        --ring: hsl(0, 0%, 100%);
-
-        --radius: 0.5rem;
+        --accent: hsl(0, 100%, 97%);
+        --border: hsl(216, 34%, 17%);
     }
 }
 

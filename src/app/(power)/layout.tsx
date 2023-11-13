@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { RootLayoutProps } from "@/src/types";
 
-function Layout({ children }: { children: ReactNode }) {
+function Layout({ children }: RootLayoutProps) {
     return (
-        <div className="flex min-h-screen flex-col">
+        <div className="flex h-screen flex-col overflow-hidden">
             <main className="flex-1">{children}</main>
         </div>
     );

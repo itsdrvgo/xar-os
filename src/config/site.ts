@@ -1,8 +1,10 @@
-export const siteConfig = {
+import { SiteConfig } from "../types";
+
+export const siteConfig: SiteConfig = {
     name: "XAR",
     description: "A custom made MAC based OS",
     url: "http://xar-os.vercel.app",
-    ogImage: "http://xar-os.vercel.app/icon.jpg",
+    ogImage: "/og.webp",
     keywords: [
         "DRVGO",
         "drago",
@@ -20,7 +22,7 @@ export const siteConfig = {
         instagram: "https://instagram.com/itsdrvgo",
         twitter: "https://www.twitter.com/itsdrvgo",
         github: "https://www.github.com/itsdrvgo",
-        discord: "https://www.dsc.gg/drvgo",
+        discord: "https://itsdrvgo.me/support",
         source: "https://github.com/itsdrvgo/xar-os",
     },
 };

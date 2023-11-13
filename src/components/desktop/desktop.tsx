@@ -1,14 +1,12 @@
 "use client";
 
 import HomeBG from "@/public/home-background.jpg";
+import { cn } from "@/src/lib/utils";
 import { DefaultProps } from "@/src/types";
 import { motion, Variants } from "framer-motion";
-import Image from "next/image";
 import Docker from "./docker";
 
-interface PageProps extends DefaultProps {}
-
-function Dekstop({ className }: PageProps) {
+function Dekstop({ className }: DefaultProps) {
     const fadeInContainer: Variants = {
         hide: {
             opacity: 0,
@@ -23,19 +21,17 @@ function Dekstop({ className }: PageProps) {
     return (
         <>
             <motion.div
-                className="absolute -z-50 h-full w-full opacity-80"
+                className={cn("h-full w-full opacity-80", className)}
                 initial="hide"
                 animate="show"
                 variants={fadeInContainer}
-            >
-                <Image
-                    src={HomeBG}
-                    alt="HomeBG"
-                    priority
-                    fill
-                    style={{ objectFit: "cover" }}
-                />
-            </motion.div>
+                style={{
+                    backgroundImage: `url(${HomeBG.src})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                }}
+            />
 
             <Docker />
         </>

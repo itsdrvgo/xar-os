@@ -1,72 +1,65 @@
-import Music from "@/public/apple-music.svg";
-import Safari from "@/public/apple-safari.svg";
-import Store from "@/public/apple-store.svg";
 import Calculator from "@/public/calculator.svg";
-import Seeker from "@/public/finder.svg";
+import Finder from "@/public/finder.svg";
 import GitHub from "@/public/github.svg";
 import Mail from "@/public/mail.svg";
+import Music from "@/public/music.svg";
+import Safari from "@/public/safari.svg";
 import Settings from "@/public/settings.svg";
-import VSCode from "@/public/visual-studio-code-icon.svg";
-import { siteConfig } from "@/src/config/site";
-import { cn } from "@/src/lib/utils";
-import { DefaultProps } from "@/src/types";
-import { motion, Variants } from "framer-motion";
-import { Separator } from "../ui/separator";
-import DockItem from "./docker-item";
+import Store from "@/public/store.svg";
+import VSCode from "@/public/vscode.svg";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
+// @ts-ignore
+import Dock from "react-osx-dock";
 
-interface PageProps extends DefaultProps {}
+interface Item {
+    src: string | StaticImport;
+    alt: string;
+    redirect?: string;
+}
 
-function Docker({ className }: PageProps) {
-    const slideUp: Variants = {
-        hide: {
-            opacity: 0,
-            y: 50,
-        },
-        show: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.5,
-            },
-        },
-    };
+const items: Item[] = [
+    { src: Finder, alt: "Finder" },
+    { src: Calculator, alt: "Calculator" },
+    { src: Music, alt: "Music" },
+    { src: Store, alt: "Store" },
+    { src: Safari, alt: "Safari" },
+    { src: Mail, alt: "Mail" },
+    { src: VSCode, alt: "VS Code" },
+    {
+        src: GitHub,
+        alt: "View Source",
+        redirect: "https://github.com/itsdrvgo/xar-os",
+    },
+    { src: Settings, alt: "Settings" },
+];
 
+function Docker() {
     return (
-        <motion.div
-            className={cn("h-full w-full cursor-default", className)}
-            initial="hide"
-            animate={"show"}
-            variants={slideUp}
+        <Dock
+            width={600}
+            magnification={1.2}
+            magnifyDirection="up"
+            className="absolute bottom-5"
         >
-            <div className="absolute bottom-5 left-1/2 grid -translate-x-1/2 grid-flow-col rounded-xl border border-gray-500 bg-white/10 p-2 px-0 backdrop-blur transition-transform">
-                <DockItem src={Seeker} alt="Seeker" />
-
-                <Separator orientation="vertical" className="bg-white/80" />
-
-                <div className="grid grid-flow-col">
-                    <DockItem src={Calculator} alt="Calculator" />
-                    <DockItem src={Music} alt="Music" />
-                    <DockItem src={Store} alt="Store" />
-                    <DockItem src={Safari} alt="Safari" />
-                    <DockItem src={Mail} alt="Mail" />
-                </div>
-
-                <Separator orientation="vertical" className="bg-white/80" />
-
-                <div className="grid grid-flow-col">
-                    <DockItem src={VSCode} alt="VS Code" />
-                    <DockItem
-                        src={GitHub}
-                        alt="View Source"
-                        redirect={siteConfig.links.source}
-                    />
-                </div>
-
-                <Separator orientation="vertical" className="bg-white/80" />
-
-                <DockItem src={Settings} alt="Settings" />
-            </div>
-        </motion.div>
+            {items
+                .map((x) => x.alt)
+                .map((item, index) => {
+                    const x = items[index];
+                    return (
+                        <Dock.Item
+                            key={index}
+                            onClick={() => {
+                                x.redirect
+                                    ? window.open(x.redirect, "_blank")
+                                    : null;
+                            }}
+                        >
+                            <Image src={x.src} alt={item} className="p-2" />
+                        </Dock.Item>
+                    );
+                })}
+        </Dock>
     );
 }
 
