@@ -1,5 +1,5 @@
 import "./globals.css";
-import CustomToaster from "@/src/components/ui/toaster";
+import CustomToaster from "@/src/components/ui/Toaster";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";

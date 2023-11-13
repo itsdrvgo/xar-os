@@ -1,6 +1,6 @@
 # **XAR OS** - MacOS Clone Built with Next.js
 
-XAR OS is a stunning and feature-rich MacOS clone created using `Next.js`, a powerful React framework. Inspired by the elegant design of MacOS, `XAR OS` brings a familiar and user-friendly experience to the web. Enjoy a seamless interface with _smooth animations_, a _responsive layout_, and a range of _macOS-like applications_.
+XAR OS is a stunning and feature-rich MacOS clone created using `Next.JS`, a powerful React framework. Inspired by the elegant design of MacOS, `XAR OS` brings a familiar and user-friendly experience to the web. Enjoy a seamless interface with _smooth animations_, a _responsive layout_, and a range of _macOS-like applications_.
 
 ### Key Features:
 
@@ -8,16 +8,15 @@ XAR OS is a stunning and feature-rich MacOS clone created using `Next.js`, a pow
 -   `Smooth transitions and animations` for an immersive experience.
 -   `Responsive layout` to adapt across various devices and screen sizes.
 -   MacOS-like applications, including `Finder (Seeker)`, `Music`, `Calculator`, `Safari`, `Mail`, and more.
--   Built with `Next.js`, ensuring optimal performance and ease of development.
+-   Built with `Next.JS`, ensuring optimal performance and ease of development.
 
 ### Technologies Used:
 
 -   [Next.JS 13 (App Router)](https://nextjs.org/)
 -   [TailwindCSS](https://tailwindcss.com/)
+-   [Next UI](https://nextui.org/)
 -   [ShadCN UI](https://ui.shadcn.com/)
 -   [Framer Motion](https://www.framer.com/motion/)
--   [Lucide Icons](https://lucide.dev/)
--   [Zustand](https://zustand-demo.pmnd.rs/)
 
 ## How to Run?
 

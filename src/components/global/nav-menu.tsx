@@ -6,7 +6,7 @@ import {
     MenubarMenu,
     MenubarSeparator,
     MenubarTrigger,
-} from "@/src/components/ui/menubar";
+} from "@/src/components/ui/Menubar";
 import { DefaultProps } from "@/src/types";
 import { useRouter } from "next/navigation";
 import XAR from "./svgs/XAR";
