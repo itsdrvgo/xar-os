@@ -5,7 +5,7 @@ import {
     ContextMenuItem,
     ContextMenuSeparator,
     ContextMenuTrigger,
-} from "@/src/components/ui/ContentMenu";
+} from "@/src/components/ui/contextMenu";
 import { RootLayoutProps } from "@/src/types";
 import { Metadata } from "next";
 

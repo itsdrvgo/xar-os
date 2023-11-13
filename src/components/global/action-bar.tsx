@@ -4,12 +4,12 @@ import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from "@/src/components/ui/Popover";
+} from "@/src/components/ui/popover";
 import { cn } from "@/src/lib/utils";
 import { DefaultProps } from "@/src/types";
 import { Slider } from "@nextui-org/react";
 import { Icons } from "../icons/icons";
-import Clock from "../ui/Clock";
+import Clock from "../ui/clock";
 
 function ActionBar({ className, ...props }: DefaultProps) {
     return (
